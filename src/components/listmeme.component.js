@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Card(props) {
   const lm = props.mi.map((current)=>(
     <div key={current._id} >
-      <div className="card text-white bg-info mb-3" style={{width:"25rem",border:"1px solid",padding: "10px",boxShadow:"3px 2px #888888", borderRadius:"20px"}}>
+      <div className="card text-white bg-dark mb-3" style={{width:"25rem",border:"1px solid",padding: "10px",boxShadow:"3px 2px #888888", borderRadius:"20px"}}>
         <a href={current.url}>
           <img className="card-img-top" src={current.url} alt="Image" height="400px" width="400px"/>
         </a>
