@@ -54,10 +54,10 @@ export default class CreateMeme extends Component {
   render() {
     return (
       <div>
-        <center><h2>XMeme</h2></center>
+        <center><h2>XMEME</h2></center>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
-            <label>Username: </label>
+            <label>OWNER: </label>
             <input type="text"
                 required
                 className="form-control"
@@ -66,7 +66,7 @@ export default class CreateMeme extends Component {
                 />
           </div>
           <div className="form-group"> 
-            <label>Caption: </label>
+            <label>CAPTION: </label>
             <input type="text"
                 required
                 className="form-control"
@@ -75,7 +75,7 @@ export default class CreateMeme extends Component {
                 />
           </div>
           <div className="form-group"> 
-            <label>Image Url: </label>
+            <label>IMAGE URL: </label>
             <input type="text"
                 required
                 className="form-control"
@@ -86,7 +86,8 @@ export default class CreateMeme extends Component {
           <br></br>
           <center>
           <div className="form-group">
-            <input type="submit" value="Create Meme" className="btn btn-primary" /> &nbsp; <Link className="btn btn-primary" to="/meme-list/">Meme List</Link>
+            <input type="submit" value="ADD MEME" className="btn btn-primary" /> &nbsp; 
+            <Link className="btn btn-primary" to="/meme-list/">MEME LIST</Link>
           </div>
           </center>
         </form>

@@ -13,10 +13,10 @@ function App() {
      <div className="container">
       <Navbar />
       <br/>
-      <Route path="/edit/:id" component={EditMeme} />
-      <Route path="/create-meme" component={CreateMeme} />
+      <Route path="/" exact component={CreateMeme} />
       <Route path="/meme-list" component={ListMeme} />
-     </div>
+      <Route path="/edit/:id" component={EditMeme} />
+      </div>
     </Router>
   );
 }

@@ -49,23 +49,28 @@ export default class EditMeme extends Component {
     
     URL = document.URL.split("/");
     const uid=URL[URL.length-1]==""?URL[URL.length-2]:URL[URL.length-1]
-    axios.patch("https://x-meme-app.herokuapp.com/memes/"+uid, meme)
+    axios.patch("https://x-meme-app.herokuapp.com/memes/"+this.props.match.params.id, meme)
       .then(res => {console.log(res.data)})
       .catch((error)=>{
         console.log(error);
       })
-    //setTimeout(function(){alert("Updated successfully");}, 1000);
+    
     alert("Updated successfully. Click on Meme List");
-    //window.location = '/meme-list';   
-    //window.location.reload();
+    this.setState({
+      owner: '',
+      caption: '',
+      url:''
+    })
+    //window.location="/meme-list"
+    
   }
   render() {
     return (
       <div>
-        <h3>Edit Meme</h3>
+        <h3>EDIT MEME</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
-            <label>Caption: </label>
+            <label>CAPTION: </label>
             <input type="text"
                 required
                 className="form-control"
@@ -74,7 +79,7 @@ export default class EditMeme extends Component {
                 />
           </div>
           <div className="form-group"> 
-            <label>Image Url: </label>
+            <label>IMAGE URL: </label>
             <input type="text"
                 required
                 className="form-control"
@@ -85,7 +90,7 @@ export default class EditMeme extends Component {
 
           <div className="form-group">
             <input type="submit" value="Edit Meme" className="btn btn-primary" />&nbsp;
-            <Link to="/meme-list" className="btn btn-primary">Meme List</Link>
+            <Link to="/meme-list" className="btn btn-primary">MEME LIST</Link>
           </div>
         </form>
       

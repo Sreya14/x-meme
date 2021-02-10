@@ -6,14 +6,14 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav className="navbar sticky-top navbar-light bg-light navbar-expand-sm">
-        <Link to="/meme-list" className="navbar-brand">X-Meme</Link>
+        <Link to="/" className="navbar-brand">X-MEME</Link>
         <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="navbar-item">
-          <Link to="/create-meme" className="nav-link">Create Meme</Link>
+          <Link to="/" className="nav-link">CREATE MEME</Link>
           </li>
           <li className="navbar-item">
-          <Link to="/meme-list" className="nav-link">Memes List</Link>
+          <Link to="/meme-list" className="nav-link">MEMES LIST</Link>
           </li>
         </ul>
         </div>
