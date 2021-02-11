@@ -12,7 +12,7 @@ export default class CreateMeme extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      owner: '',
+      name: '',
       caption: '',
       url:''
     }
@@ -21,7 +21,7 @@ export default class CreateMeme extends Component {
   
   onChangeOwner(e) {
     this.setState({
-      owner: e.target.value
+      name: e.target.value
     });
   }
   onChangeCaption(e) {
@@ -38,7 +38,7 @@ export default class CreateMeme extends Component {
   onSubmit(e) {
     e.preventDefault();
     const meme = {
-      owner: this.state.owner,
+      name: this.state.name,
       caption: this.state.caption,
       url: this.state.url,
     };
@@ -46,7 +46,7 @@ export default class CreateMeme extends Component {
       .then(res => console.log(res.data));
     alert("Created sucessfully. Click on Meme List");
     this.setState({
-                    owner: '',
+                    name: '',
                     caption: '',
                     url:''
                   })
@@ -61,7 +61,7 @@ export default class CreateMeme extends Component {
             <input type="text"
                 required
                 className="form-control"
-                value={this.state.owner}
+                value={this.state.name}
                 onChange={this.onChangeOwner}
                 />
           </div>

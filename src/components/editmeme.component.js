@@ -57,7 +57,7 @@ export default class EditMeme extends Component {
     
     alert("Updated successfully. Click on Meme List");
     this.setState({
-      owner: '',
+      name: '',
       caption: '',
       url:''
     })

@@ -10,7 +10,7 @@ function Card(props) {
         </a>
         <div className="card-body">
           <h5>
-          <p className="card-text">PUBLISHED BY: {current.owner.toUpperCase()}</p>
+          <p className="card-text">PUBLISHED BY: {current.name.toUpperCase()}</p>
           <p className="card-text">CAPTION: {current.caption}</p>
           </h5>
           <a className="btn btn-light" href={"/edit/"+current._id} role="button">Edit</a> &nbsp;
